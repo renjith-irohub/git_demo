@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>onchange Example</title>
+</head>
+<body>
+
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name">
+
+    <br><br>
+
+    <label for="color">Choose color:</label>
+    <select id="color">
+        <option value="">--Select--</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <p id="output"></p>
+
+    <script>
+        // Text input onchange
+        document.getElementById("name").onchange = function() {
+            document.getElementById("output").textContent = "Name changed to: " + this.value;
+        };
+
+        // Dropdown onchange
+        document.getElementById("color").onchange = function() {
+            document.body.style.backgroundColor = this.value;
+        };
+    </script>
+
+</body>
+</html>
